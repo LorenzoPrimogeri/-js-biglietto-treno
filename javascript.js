@@ -1,25 +1,25 @@
 
-const NumeroKm = prompt("quanti km vuole percorere?", 10);
-const Eta = prompt("qual'è la sua eta?");
-const PrezzoBiglietto = 0.21;
-let Sconto20 = (PrezzoBiglietto * NumeroKm * 20 / 100);
-let Sconto40 = (PrezzoBiglietto * NumeroKm * 40 / 100);
-let PrezzoFinale;
+const numerokm = prompt("quanti km vuole percorere?", 10);
+const eta = prompt("qual'è la sua eta?");
+const prezzobiglietto = 0.21;
+let sconto20 = (prezzobiglietto * numerokm * 20 / 100);
+let sconto40 = (prezzobiglietto * numerokm * 40 / 100);
+let prezzofinale;
 
-if (isNaN(NumeroKm) || isNaN(Eta)) {
+if (isNaN(numerokm) || isNaN(eta)) {
     alert("Lo sai che ti ho chiesto dei numeri?");
-} else if (Eta < 18) {
-    PrezzoFinale = (PrezzoBiglietto * NumeroKm - Sconto20);
-    PrezzoFinale = (Math.round(PrezzoFinale * 100) / 100).toFixed(2);
-    document.getElementById("PrezzoFinale").innerHTML = "Il prezzo finale (con lo sconto del 20%) è: " + PrezzoFinale + " $";
-} else if (Eta > 18 && Eta < 65) {
-    PrezzoFinale = (PrezzoBiglietto * NumeroKm);
-    PrezzoFinale = (Math.round(PrezzoFinale * 100) / 100).toFixed(2);
-    document.getElementById("PrezzoFinale").innerHTML = "Il prezzo finale è: " + PrezzoFinale + " $";
-} else if (Eta > 65) {
-    PrezzoFinale = (PrezzoBiglietto * NumeroKm - Sconto40);
-    PrezzoFinale = (Math.round(PrezzoFinale * 100) / 100).toFixed(2);
-    document.getElementById("PrezzoFinale").innerHTML = "Il prezzo finale (con lo sconto del 40%) è: " + PrezzoFinale + " $";
+} else if (eta < 18) {
+    prezzofinale = (prezzobiglietto * numerokm - sconto20);
+    prezzofinale = (Math.round(prezzofinale * 100) / 100).toFixed(2);
+    document.getElementById("PrezzoFinale").innerHTML = "Il prezzo finale (con lo sconto del 20%) è: " + prezzofinale + " $";
+} else if (eta > 18 && eta < 65) {
+    prezzofinale = (prezzobiglietto * numerokm);
+    prezzofinale = (Math.round(prezzofinale * 100) / 100).toFixed(2);
+    document.getElementById("PrezzoFinale").innerHTML = "Il prezzo finale è: " + prezzofinale + " $";
+} else if (eta > 65) {
+    prezzofinale = (prezzobiglietto * numerokm - sconto40);
+    prezzofinale = (Math.round(prezzofinale * 100) / 100).toFixed(2);
+    document.getElementById("PrezzoFinale").innerHTML = "Il prezzo finale (con lo sconto del 40%) è: " + prezzofinale + " $";
 }
 
 
