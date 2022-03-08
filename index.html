@@ -5,11 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="javascript.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <p id="PrezzoFinale"></p>
-    <script src="javascript.js"></script>
+    <div class="container-fluid d-flex justify-content-center align-items-center py-5">
+        <div class="container py-5 bg-white rounded-3 text-center">
+            <label class="w-100">Inserisci i km</label>
+            <input class="my-3" type="number" id="numerokm">
+            <label class="w-100">Inserisci l'eta</label>
+            <input class="my-3" type="number" id="eta">
+            <div>
+                <button class="lp-btn" id="btn">Invia</button>
+            </div>
+            <p id="PrezzoFinale"></p>
+        </div>
+
+    </div>
 </body>
 
 </html>
