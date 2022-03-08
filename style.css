@@ -9,3 +9,7 @@ body{
 .lp-btn{
     width: 200px;
 }
+.lp-container{
+    width: 1200px;
+    height: 400px;
+}
